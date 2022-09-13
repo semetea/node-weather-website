@@ -5,29 +5,35 @@
 <head>
     <title>Weather</title>
     <link rel="icon" href="/img/weather.png">
-    <link rel="stylesheet" href="./css/styles.css">
-     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
    crossorigin=""/>
    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
-   crossorigin=""></script>    
+   crossorigin=""></script>
+    <link rel="stylesheet" href="./css/styles.css"> 
+    <script src="https://kit.fontawesome.com/8eb5067444.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <div class="main-content">
-        {{>header}}
+<body class="relative">
+    {{>header}}
+    <div class="container flex flex-col justify-items-center border p-6 rounded mx-auto">
+        <div class="mb-3">
+            <h3 class="text-2xl font-semibold">Use this site to get your weather</h3>
+        </div>
 
-        <p>Use this site to get your weather</p>
+        <div>
+            <form class="flex">
+                <div class="mr-5"><input placeholder="Location"></div>
+                <div><button class="btn">Search</button></div>
+            </form>
+        </div>
 
-        <form>
-            <input placeholder="Location"> 
-            <button>Search</button>            
-        </form>
-
-        <p id="message-1"></p>
-        <p id="message-2"></p>
-        <div id="map"></div>
+        <div>
+            <p id="message-1"></p>
+            <p id="message-2"></p>
+        </div>
+        <div id="map" class="map" style="height: 180;"></div>
     </div>
     
     {{>footer}}

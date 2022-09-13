@@ -11,8 +11,13 @@
 <body>
     <div class="main-content">
         {{>header}}
-        <p>This site was created by Taewoo Han. It uses data from mapbox.com and weatherstack.com</p>
-        <img class="portrait" src="img/robot.png">
+        <div class="container flex flex-col justify-items-center border p-6 rounded mx-auto">
+            <div>
+            <p class="mb-5">This site was created by Taewoo Han.<br /> It uses data from <a class="text-green-400" href="https://www.mapbox.com/">mapbox.com</a> and <a class="text-green-400" href="https://weatherstack.com/">weatherstack.com</a></p>
+            </div>
+            <div class="mb-40 w-72 h-64"><img src="img/Selfie.jpg"></div>
+            <div><p>This is my github link : <a href="https://github.com/semetea"><span class="underline">https://github.com/semetea</span></a></p></div>
+        </div>
     </div>
     {{>footer}}
 </body>

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/app.js --watch"
+    "start": "nodemon -e hbs src/app.js"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +16,8 @@
     "nodemon": "^2.0.15",
     "postman-request": "^2.88.1-postman.31",
     "prettier": "^2.7.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
   }
 }

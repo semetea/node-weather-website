@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  input {
+    @apply rounded-sm py-5 font-light text-lg w-full text-left border border-gray-600 px-5;
+
+    &:focus {
+      @apply outline-none border-teal-500;
+    }
+  }
+  p,
+  span {
+    @apply text-gray-500 font-semibold;
+  }
+}
+@layer components {
+  .map {
+    @apply h-96;
+  }
+  .btn {
+    @apply text-center rounded-lg py-5 font-light text-lg w-full text-white bg-gray-600 px-3;
+  }
+  .error {
+    @apply text-red-600 font-semibold;
+  }
+}

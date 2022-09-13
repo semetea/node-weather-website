@@ -34,14 +34,6 @@ app.get("/about", (req, res) => {
   });
 });
 
-app.get("/help", (req, res) => {
-  res.render("help", {
-    title: "Help",
-    name: "Terry Han",
-    message: "This is some helpful text",
-  });
-});
-
 app.get("/weather", (req, res) => {
   if (!req.query.address) {
     return res.send({
@@ -100,5 +92,5 @@ app.get("*", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log("Server is up on port" + port);
+  console.log("Server is up on port " + port);
 });
